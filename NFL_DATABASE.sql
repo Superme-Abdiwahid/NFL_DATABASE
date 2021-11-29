@@ -260,7 +260,7 @@ ADD Foreign key (GameID) References AH_Game(GameID)
  
  
 ALTER TABLE AH_Team_Game_Statistic
-ADD Foreign key (StatisticID) References Bp_Statistics(StatisticID)
+ADD Foreign key (StatisticID) References AH_Statistics(StatisticID)
  
  
 ----------------------
@@ -338,7 +338,7 @@ StatDescr varchar(125) NOT NULL)
 -- add foreign key
 ALTER TABLE AH_Statistics
 ADD StatisticTypeID INT
-FOREIGN KEY REFERENCES BP_StatisticsType (StatisticTypeID)
+FOREIGN KEY REFERENCES AH_StatisticsType (StatisticTypeID)
 --------------------------------------------------------------------
 -- create table
 CREATE TABLE AH_Employee
@@ -357,7 +357,7 @@ EndDate Date)
 -- add foreign key
 ALTER TABLE AH_EmployeeRole
 ADD EmployeeID INT
-FOREIGN KEY REFERENCES BP_Employee (EmployeeID)
+FOREIGN KEY REFERENCES AH_Employee (EmployeeID)
 -- add foreign key
 ALTER TABLE AH_EmployeeRole
 ADD RoleID INT
